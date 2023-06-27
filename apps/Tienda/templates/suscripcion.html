@@ -1,0 +1,62 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block title %}Suscripcion{% endblock %}
+      
+      
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/stylesubs.css' %}">
+{% endblock %}      
+      
+{% block body %}
+      <div class="container mt-5">
+        <h1 class="sus2">Beneficios</h1> , <h1 class="sus">Suscribete</h1>
+    </div>
+<div class="carta">
+  <h4>Nustro sistema de subscripcion es para que puede tener siertos beneficios en su compra</h4>
+  <h5>beneficios: <br> 
+    ofertas exclusibas para subs <br>
+    envios gratis <br>
+    devoluciones gratis
+  </h5>
+  <div class="card">
+    <div class="input-container">
+      <label class="input-label" for="nombre">Nombre:</label>
+      <input type="text" id="nombre" class="input-field" placeholder="Nombre">
+    </div>
+
+    <div class="input-container">
+      <label class="input-label" for="apellido">Apellido:</label>
+      <input type="text" id="apellido" class="input-field" placeholder="Apellido">
+    </div>
+
+    <div class="input-container">
+      <label class="input-label" for="rut">RUT:</label>
+      <input type="text" id="rut" class="input-field" placeholder="RUT">
+    </div>
+
+    <div class="input-container">
+      <label class="input-label" for="usuario">Usuario:</label>
+      <input type="text" id="usuario" class="input-field" placeholder="Usuario">
+    </div>
+
+    <div class="input-container">
+      <label class="input-label" for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" class="input-field" placeholder="Contraseña">
+    </div>
+    <button id="suscribirseBtn" class="input-subs" type="button">Suscribirse</button>
+  </div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="/js/jquery.validate.min.js"></script>
+		<script src="/js/jquery.js"></script>
+		<script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="/js/valsubs.js"></script>
+    <script src="/js/relo.js"></script>
+    <script src="/js/moscuro.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+{% endblock %}

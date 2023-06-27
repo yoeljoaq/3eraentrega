@@ -1,0 +1,65 @@
+{% extends './base.html' %}
+
+{% block body %}
+    <h1>Editar productos</h1>
+
+    <div class="container">
+        <form action="/editarProductoForm" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="txtSku">SKU:</label>
+                    <input readonly value="{{prod.sku}}" name="txtSku" id="txtSku" type="text" class="form-control">
+                </div>
+
+                <div class="col-md-3">
+                    <label for="txtNombre">Nombre:</label>
+                    <input value="{{prod.nombre}}" name="txtNombre" id="txtNombre" type="text" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="txtDescripcion">Descripción:</label>
+                    <textarea value="{{prod.descripcion}}" name="txtDescripcion" id="txtDescripcion" type="text" class="form-control"></textarea>
+                
+                </div>
+
+                <div class="col-md-2">
+                    <label for="txtStock">Stock:</label>
+                    <input value="{{prod.stock}}" name="txtStock" id="txtStock" type="text" class="form-control">
+                </div>
+
+
+                <div class="col-md-2">
+                    <label for="txtPrecio">Precio:</label>
+                    <input value="{{prod.precio}}" name="txtPrecio" id="txtPrecio" type="number" class="form-control">
+                </div>
+
+
+                <div class="col-md-2">
+                    <label for="fechaVencimientoSel">Fecha de vencimiento:</label>
+                    <input value="{{prod.fecha_vencimiento|date:'Y-m-d'}}" type="date" name="fechaVencimientoSel" id="fechaVencimientoSel" type="text" class="form-control">
+                </div>
+
+
+                <div class="col-md-2">
+                    <label for="cmbCategoria">Categoria:</label>
+                    <select name="cmbCategoria" id="cmbCategoria" class="form-select" aria-label="Default select example">
+                        <!-- <option disabled selected>Seleccione</option> -->
+
+                        {% for c in cate %}
+                        <option value="{{c.categoria_id}}" {% if categoriaId == c.categoria_id %} selected {% endif %}>{{c.nombre}}</option>
+                        {% endfor %}
+                      </select>  
+                </div>
+
+
+                <div class="col-md-6">
+                    <label for="txtImg">Imagen URL:</label>
+                    <img src="{{prod.image_url.url}}" alt="" height="100">
+                    <input  name="txtImg" id="txtImg" type="file" class="form-control">
+                </div>
+            </div>
+            <button class="btn btn-primary mt-5 mb-5 w-30">Editar Producto</button>
+        </form>
+    </div>
+
+    {% endblock %}

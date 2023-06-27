@@ -1,0 +1,94 @@
+  .carta {
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #4d4b4bb7;
+    box-sizing: border-box;
+    margin: 1;
+  }
+  .card {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #4d4b4bb7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-left: 780px; 
+    margin-top: -220px;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .input-label {
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #323232;
+  }
+  
+  .input-field {
+    flex: 1;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #323232;
+    background-color: #fff;
+    box-shadow: 4px 4px #323232;
+    font-size: 15px;
+    font-weight: 600;
+    color: #323232;
+    padding: 5px 10px;
+    outline: none;
+  }
+  
+  .input-field::placeholder {
+    color: #666;
+    opacity: 0.8;
+  }
+  
+  .input-field:focus {
+    border: 2px solid #2d8cf0;
+  }
+  .input-subs {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    --main-color: #323232;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+    margin-left: 110px;
+  }
+  
+  .input-subs::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+  }
+  
+  .input-subs:focus {
+    border: 2px solid var(--input-focus);
+  }
+  .sus{
+    margin-left: 785px;
+  }
+  .sus2{
+    display: flex;
+    position: relative;
+    top: 80px;
+    right: 10px;
+  }
+  

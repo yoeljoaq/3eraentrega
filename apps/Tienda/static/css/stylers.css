@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    margin-left: -300px;
+  }
+  
+  .card {
+    text-align: center;
+    margin-right: 10px;
+  }
+  
+  .card-instagram {
+    background-color: #ffce3d;
+  }
+  
+  .card-facebook {
+    background-color: #4267B2;
+  }
+  
+  .card-tiktok {
+    background-color: #69c9d0;
+  }
+  
+  .card-twitter {
+    background-color: #1da1f2;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .social-links a .logo {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+  
+  .social-links a.instagram .logo {
+    background-image: radial-gradient(#feda77 30%, #d62976 70%);
+  }
+  
+  .social-links a.facebook .logo {
+    background-color: #3b5998;
+  }
+  
+  .social-links a.tiktok .logo {
+    background-color: #69c9d0;
+  }
+  
+  .social-links a.twitter .logo {
+    background-color: #1da1f2;
+  }
+  
+  .social-links a:hover {
+    color: #2d8cf0;
+  }
+  
+  .log-tiktok{
+    display: flex;
+    position: relative;
+    max-width: 50px;
+    max-height: 50px;
+    left: 80px;
+    top: 30px;
+  }
+  .log-face{
+    display: flex;
+    position: relative;
+    max-width: 50px;
+    max-height: 50px;
+    left: 80px;
+    top: 30px;
+  }
+  .log-twitter{
+    display: flex;
+    position: relative;
+    max-width: 50px;
+    max-height: 50px;
+    left: 80px;
+    top: 30px;
+  }
+  .log-insta{
+    display: flex;
+    position: relative;
+    max-width: 50px;
+    max-height: 50px;
+    left: 80px;
+    top: 30px;
+  }

@@ -1,0 +1,42 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block title %}Clima{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/styleclima.css' %}">
+{% endblock %}
+
+{% block body %}
+
+        <div class="container-card">
+            <form action="" method="POST" class="get-weather">
+                <h1>Buscador de clima</h1>
+                <div class="result">{% csrf_token %}
+                    <p>Agregue ciudad y pais</p>
+                    <h5>El clima es: </h5>
+    
+                    <h2> 0°C</h2>
+                    <p>Max: 0°C</p>
+                    <p>Min: 0°c</p>
+                </div>
+                <input type="text" name="city" id="city" placeholder="Write your city...">
+                <select name="" id="country">
+                    <option value="AR">Argentina</option>
+                    <option value="CL">Chile</option>
+                    <option value="CO">Colombia</option>
+                    <option value="ES">España</option>
+                    <option value="CR">Costa Rica</option>
+                    <option value="US">Estados Unidos</option>
+                    <option value="MX">Mexico</option>
+                    <option value="PE">Peru</option>
+                </select>
+                <input type="submit" name="" id="" value="Get Weather">
+            </form>
+        </div>
+        {% endblock %}
+
+
+        {% block script %}
+<script src="{% static 'js/funciones.js' %}"></script>
+        {% endblock %}
